@@ -261,7 +261,7 @@
           <!-- Your image here -->
           <img src="static/images/task1-example-2.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            Third image description.
+            <!-- Third image description. -->
           </h2>
         </div>
         <div class="item">
@@ -289,6 +289,16 @@
       <!-- Title -->
       <h1 class="title is-3">Task 2: Cultural Visual Grounding</h1>
       <br>
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Task Definition</h3>
+      <p>Given an image \( I \) and a query \( q \) describing a cultural keyword, the goal is to predict a bounding box \( R \) around the region in \( I \) that corresponds to \( q \). We evaluate models based on the overlap between the gold standard and predicted regions of interest, using Intersection over Union (IoU) as the metric, defined as:</p>
+      <div class="equation">
+        \[
+        \text{IoU} = \frac{|R \cap R_{\text{gold}}|}{|R \cup R_{\text{gold}}|}
+        \]
+        <p>where \( R \) is the predicted bounding box and \( R_{\text{gold}} \) is the ground truth bounding box.</p>
+      </div>
+
+      <p>We consider a predicted bounding box correct if its IoU with the ground truth bounding box is greater than 0.5, and report overall accuracy.</p>
       <br>
       <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Dataset Statistics</h3>
       <div class="figures" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
