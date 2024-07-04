@@ -43,6 +43,11 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 <body>
 
@@ -79,7 +84,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/2407.00263" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="ai ai-arxiv"></i>
@@ -101,7 +106,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/meharbhatia/globalrg" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -112,7 +117,7 @@
 
                 <!-- Data -->
                 <span class="link-block">
-                  <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                  <a href="https://github.com/meharbhatia/globalrg" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-database"></i>
@@ -129,23 +134,6 @@
 </section>
 
 
-<!-- Teaser video-->
-<!-- <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        Your video here -->
-        <!-- <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section> -->
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -154,7 +142,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Despite recent advancements in vision-language models, their performance remains suboptimal on images from non-western cultures due to underrepresentation in training datasets. Various benchmarks have been proposed to test models' cultural inclusivity, but they have limited coverage of cultures and do not adequately assess cultural diversity across universal as well as culture-specific local concepts. To address these limitations, we introduce the <b>GlobalRG benchmark</b>, comprising two challenging tasks: <b>retrieval across universals</b> and <b>cultural visual grounding</b>. The former task entails retrieving culturally diverse images for universal concepts from 50 countries, while the latter aims at grounding culture-specific concepts within images from 15 countries. Our evaluation across a wide range of models reveals that the performance varies significantly across cultures -- underscoring the necessity for enhancing multicultural understanding in vision-language models.
+            Despite recent advancements in vision-language models, their performance remains suboptimal on images from non-western cultures due to underrepresentation in training datasets. Various benchmarks have been proposed to test models' cultural inclusivity, but they have limited coverage of cultures and <b><i>do not adequately assess cultural diversity </i></b>across universal as well as culture-specific local concepts. To address these limitations, we introduce the <b>GlobalRG benchmark</b>, comprising two challenging tasks: <b>retrieval across universals</b> and <b>cultural visual grounding</b>. The former task entails retrieving culturally diverse images for universal concepts from 50 countries, while the latter aims at grounding culture-specific concepts within images from 15 countries. Our evaluation across a wide range of models reveals that the performance varies significantly across cultures -- underscoring the necessity for enhancing multicultural understanding in vision-language models.
           </p>
         </div>
       </div>
@@ -164,105 +152,206 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+      <div class="item" style="text-align: center;">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/motivation.png" style="width: 80%;"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          An example instance from each task in GlobalRG benchmark: (i) <i>Retrieval Across Universals</i> measures the ability of VLMs to retrieve culturally diverse images for a query q. (ii) <i>Cultural Visual Grounding</i> aims to evaluate the ability of VLMs to identify a cultural concept q. 
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <div class="item" style="text-align: center;">
+        <h3 class="title is-4">Research Questions Discussed</h3>
+        <div class="content" style="font-size: 0.875rem;">
+          <ol>
+            <li>Are able to <i>(TASK 1)</i> <strong>retrieve </strong> relevant and culturally diverse images for universals AND <i>(TASK2)</i> <strong>ground</strong> culture-specific local concepts?</li>
+            <li><strong>Do VLMs exhibit biases </strong> towards images from specific cultures?</li>
+            <li>What are the <strong>challenges faced by VLMs </strong>in achieving <i>(Task 1)</i> high cultural diversity AND <i>(TASK 2)</i> grounding culture-specific concepts?? </li>
+          </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <!-- Title -->
+      <h1 class="title is-3" style="background-color: rgb(110, 188, 227); color: white;">Task 1: Retrieval Across Universals</h1>
+      <br>
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Task Definition</h3>
+      <div class="content">
+        <p>Let \( Q = \{q_1, q_2, \ldots, q_n\} \) be a set of textual queries representing universal concepts, and \( I = \{I_1, I_2, \ldots, I_m\} \) the set of images from different cultures. Given a query \( q \in Q \), the goal is to retrieve a ranked list of images \( R(q, I) = \{I_{r1}, I_{r2}, \ldots, I_{rk} \} \subset I \) that maximizes both relevance and cultural diversity.</p>
+        <!-- <ul> -->
+          <strong>Relevance:</strong> \( \text{Rel}(q, I) \) refers to how well the image \( I \) matches the query \( q \) captured by the standard precision@k.<br>
+          <strong>Diversity:</strong> \( \text{Div}(R(q, I)) \) measures the cultural diversity of the retrieved images using the formula, 
+        <!-- </ul> -->
+        <!-- <p>Specifically, relevance is captured by the standard precision@k, the ratio of the top \( k \) retrieved images that correctly answer the query. For diversity, we propose the diversity@k metric, which uses entropy to measure the cultural diversity among the top \( k \) retrieved images:</p> -->
+        <p>\[
+        \text{diversity@k} = - \frac{1}{\log m} \sum_{i=1}^{m} p_i \log(p_i)
+        \]</p>
+        <p>where \( p_i \) is the proportion of images from the \( i \)-th culture in the top \( k \) retrieved images \( R(q) \), <br>
+          and \( m \) is the total number of cultures in the top \( k \). <br><br>
+          A high entropy value (∼ 100) indicates high diversity, retrieved images are well-distributed across different cultures. <br>
+          Conversely, a low entropy value (∼ 0) indicates low diversity, retrieved images are biased towards specific cultures.</p>
+      </div>
+      <br>
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Dataset Statistics</h3>
+      <div class="figures" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <div class="item" style="text-align: center;">
+          <!-- First image -->
+          <img src="static/images/task1-cultures.png" alt="First Image" style="width: 90%;"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.875rem;">
+            List of 50 cultures covered in the retrieval task.
+          </h2>
+        </div>
+        <div class="item" style="text-align: center;">
+          <!-- Second image -->
+          <img src="static/images/task1-universals.png" alt="Second Image" style="width: 90%;"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.875rem;">
+            Human universals used as textual queries in 'Retrieval across Universals' task.
+          </h2>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Model Performance</h3>
+      <div class="figures" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <div class="item" style="text-align: center;">
+          <!-- First image -->
+          <img src="static/images/task1-performance.png" alt="First Image" style="width: 90%;"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.875rem;">
+            Average performance of various VLMs on the Retrieval across universals task, in terms of Relevance and Diversity.
+          </h2>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Top-5 images retrieved for a sample of universals by models CLIP, CoCA and BLIP-2.</h3>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+         <!-- Your image here -->
+         <img src="static/images/task1-examples.png" alt="MY ALT TEXT"/>
+         <h2 class="subtitle has-text-centered">
+           <!-- First image description. -->
+         </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/task1-example-1.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            <!-- Second image description. -->
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/task1-example-2.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Third image description.
+          </h2>
+        </div>
+        <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/task1-example-3.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <!-- Fourth image description. -->
+        </h2>
+      </div>
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/task1-example-4.png" alt="MY ALT TEXT"/>
+        <h2 class="subtitle has-text-centered">
+          <!-- Fourth image description. -->
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <!-- Title -->
+      <h1 class="title is-3">Task 2: Cultural Visual Grounding</h1>
+      <br>
+      <br>
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Dataset Statistics</h3>
+      <div class="figures" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <div class="item" style="text-align: center;">
+          <!-- First image -->
+          <img src="static/images/task2-stats.png" alt="First Image" style="width: 90%;"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.875rem;">
+            Detailed statistics of annotated images across different cultural groups and regions for Cultural Visual Grounding task.
+          </h2>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Model Performance</h3>
+      <div class="figures" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <div class="item" style="text-align: center;">
+          <!-- First image -->
+          <img src="static/images/task2-performance.png" alt="First Image" style="width: 90%;"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.875rem;">
+            Country-level Accuracy of each model on Cultural Visual Grounding task.
+          </h2>
+        </div>
+        <div class="item" style="text-align: center;">
+          <!-- Second image -->
+          <img src="static/images/task2-performance-cultures.png" alt="Second Image" style="width: 90%;"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.875rem;">
+            Country group-level Accuracy of eachmodel on Cultural Visual Grounding task.
+          </h2>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Examples</h3>
+      <div class="figures" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+        <div class="item" style="text-align: center;">
+          <!-- First image -->
+          <img src="static/images/task2-examples.png" alt="First Image" style="width: 90%;"/>
+          <h2 class="subtitle has-text-centered" style="font-size: 0.875rem;">
+            <!-- Country-level Accuracy of each model on Cultural Visual Grounding task. -->
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Task 2: Cultural Visual Grounding</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
-
+</section> -->
 
 
 <!-- Paper poster -->
@@ -287,11 +376,11 @@
     <h2 class="title is-3">Citation</h2>
     <p>If you found this work useful in your own research, please consider citing the following:</p>
       <pre><code>
-        @misc{bhatia2024from,
+        @article{bhatia2024local,
           title={From Local Concepts to Universals: Evaluating the Multicultural Understanding of Vision-Language Models},
           author={Bhatia, Mehar and Ravi, Sahithya and Chinchure, Aditya and Hwang, Eunjeong and Shwartz, Vered},
-          year={2024},
-          note={Unpublished manuscript}
+          journal={arXiv preprint arXiv:2407.00263},
+          year={2024}
         }
       </code></pre>
   </div>
