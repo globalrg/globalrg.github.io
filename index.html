@@ -76,7 +76,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">University of British Columbia, Vector Institute of AI<br>Accepted to EMNLP'24 Main</span>
+                    <span class="author-block">University of British Columbia, Vector Institute of AI<br>Published at EMNLP'24 Main</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -84,12 +84,12 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/abs/2407.00263" target="_blank"
+                        <a href="https://aclanthology.org/2024.emnlp-main.385/" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="ai ai-arxiv"></i>
                         </span>
-                        <span>Paper (Arxiv)</span>
+                        <span>Paper</span>
                       </a>
                     </span>
 
@@ -117,14 +117,25 @@
 
                 <!-- Data -->
                 <span class="link-block">
-                  <a href="https://github.com/meharbhatia/globalrg" target="_blank"
+                  <a href="https://huggingface.co/datasets/UBCNLP/GlobalRG-Retrieval" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-database"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Data (Task1 Retrieval on HF)</span>
                 </a>
               </span>
+
+              <!-- Data -->
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/UBCNLP/GlobalRG-Grounding" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <i class="fa fa-database"></i>
+                </span>
+                <span>Data (Task2 Grounding on HF)</span>
+              </a>
+            </span>
             </div>
           </div>
         </div>
@@ -261,7 +272,7 @@
           <!-- Your image here -->
           <img src="static/images/task1-example-2.png" alt="MY ALT TEXT"/>
           <h2 class="subtitle has-text-centered">
-            <!-- Third image description. -->
+            Third image description.
           </h2>
         </div>
         <div class="item">
@@ -289,16 +300,6 @@
       <!-- Title -->
       <h1 class="title is-3">Task 2: Cultural Visual Grounding</h1>
       <br>
-      <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Task Definition</h3>
-      <p>Given an image \( I \) and a query \( q \) describing a cultural keyword, the goal is to predict a bounding box \( R \) around the region in \( I \) that corresponds to \( q \). We evaluate models based on the overlap between the gold standard and predicted regions of interest, using Intersection over Union (IoU) as the metric, defined as:</p>
-      <div class="equation">
-        \[
-        \text{IoU} = \frac{|R \cap R_{\text{gold}}|}{|R \cup R_{\text{gold}}|}
-        \]
-        <p>where \( R \) is the predicted bounding box and \( R_{\text{gold}} \) is the ground truth bounding box.</p>
-      </div>
-
-      <p>We consider a predicted bounding box correct if its IoU with the ground truth bounding box is greater than 0.5, and report overall accuracy.</p>
       <br>
       <h3 class="title is-5" style="background-color: rgb(215, 172, 237); color: white;">Dataset Statistics</h3>
       <div class="figures" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
